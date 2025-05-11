@@ -42,7 +42,7 @@ class XMindServer {
                 const sheets = workbook.getSheets();
                 // 提取所有工作表数据
                 const result = sheets.map((sheet) => ({
-                    title: sheet.getTitle(),
+                    title: sheet.getTitle(), // 工作表标题
                     topics: this.extractTopics(sheet.getRootTopic()) // 提取主题树
                 }));
                 return {
@@ -66,8 +66,8 @@ class XMindServer {
      */
     extractTopics(topic) {
         const result = {
-            title: topic.getTitle(),
-            notes: topic.getNotes(),
+            title: topic.getTitle(), // 主题标题
+            notes: topic.getNotes(), // 主题备注
             children: [] // 子主题
         };
         const children = topic.getChildren();
