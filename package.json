@@ -1,0 +1,43 @@
+{
+  "name": "xmind-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for XMind file processing",
+  "description_zh": "用于处理XMind文件的MCP服务器",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "xmind-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc --outDir dist && chmod +x dist/index.js",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "adm-zip": "^0.5.10",
+    "jsdom": "^22.1.0",
+    "xmind": "^2.2.33"
+  },
+  "devDependencies": {
+    "@types/adm-zip": "^0.5.3",
+    "@types/jsdom": "^21.1.6",
+    "typescript": "^4.0.0"
+  },
+  "config": {
+    "scripts_zh": {
+      "build": "编译TypeScript并添加执行权限",
+      "start": "启动MCP服务器"
+    },
+    "dependencies_zh": {
+      "@modelcontextprotocol/sdk": "MCP官方SDK",
+      "adm-zip": "ZIP文件处理库",
+      "jsdom": "XML解析库",
+      "xmind": "XMind文件处理库"
+    },
+    "devDependencies_zh": {
+      "@types/adm-zip": "adm-zip类型定义",
+      "@types/jsdom": "jsdom类型定义",
+      "typescript": "TypeScript编译器"
+    }
+  }
+}
