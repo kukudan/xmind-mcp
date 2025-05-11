@@ -10,8 +10,26 @@
   },
   "scripts": {
     "build": "tsc --outDir dist && chmod +x dist/index.js",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
   },
+  "keywords": [
+    "xmind",
+    "mcp",
+    "cursor",
+    "ide",
+    "mindmap"
+  ],
+  "author": "kukudan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kukudan/xmind-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kukudan/xmind-mcp/issues"
+  },
+  "homepage": "https://github.com/kukudan/xmind-mcp#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
     "adm-zip": "^0.5.10",
